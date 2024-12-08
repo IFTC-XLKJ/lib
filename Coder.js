@@ -11,7 +11,7 @@ class Coder {
         const nodes = html.querySelectorAll("*")
         for (let i = 0; i < nodes.length; i++) {
             const node = nodes[i]
-            const tag = node.tagName
+            const tag = node.tagName.toLowerCase()
             result += `&lt;<span class="tag">${tag}</span>&gt;`
         }
         console.log(nodes)
