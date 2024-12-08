@@ -7,6 +7,7 @@
     <title>Monaco Editor</title>
     <script src="/monaco-editor/dev/vs/loader.js"></script>
     <link rel="stylesheet" href="Monaco Editor.css">
+    <script src="Coder.js"></script>
 </head>
 
 <body>
@@ -62,7 +63,7 @@
             <h2>注入编辑器</h2>
             <pre id="code1"></pre>
             <script>
-                code1.innerText = `<!DOCTYPE html>
+                window.Code1 = `<!DOCTYPE html>
 <html>
 
 <head>
@@ -89,6 +90,7 @@
 </body>
 
 </html>`
+                code1.innerText = new Coder(Code1)
             </script>
         </div>
     </div>
