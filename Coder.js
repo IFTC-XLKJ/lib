@@ -1,6 +1,7 @@
 class Coder {
+    #code
     constructor(code) {
-        this.get(this.#init(code));
+        this.#code = code
     }
     #init(code) {
         let result = code
@@ -14,7 +15,7 @@ class Coder {
         return result
     }
 
-    get(code) {
-        return code
+    get() {
+        return this.#init(this.#code)
     }
 }
