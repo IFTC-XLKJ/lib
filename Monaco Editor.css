@@ -15,11 +15,12 @@
 }
 
 #doc {
-    margin: 15px;
+    /* margin: 15px; */
 }
 
 #doc pre {
     background-color: #333;
+    border-radius: 5px;
 }
 
 #doc pre code {
