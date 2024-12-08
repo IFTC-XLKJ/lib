@@ -27,13 +27,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Monaco Editor</title>
-    <script src="/monaco-editor/dev/vs/loader.js"><\/script>
+    <script src="https://mlibs.pages.dev/monaco-editor/dev/vs/loader.js"><\/script>
 </head>
 
 <body>
     <div id="editor" hidden style="width: 90vw;height: 75vh;"></div>
     <script>
-        require.config({ paths: { 'vs': 'monaco-editor/dev/vs' } });
+        require.config({ paths: { 'vs': 'https://mlibs.pages.dev/monaco-editor/dev/vs' } });
         require(['vs/editor/editor.main'], function () {
             document.getElementById("editor").hidden = false;
             var editor = monaco.editor.create(document.getElementById("editor"), {
