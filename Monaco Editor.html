@@ -31,11 +31,10 @@
 </head>
 
 <body>
-    <div id="editor" hidden style="width: 90vw;height: 75vh;"></div>
+    <div id="editor" style="width: 90vw;height: 75vh;"></div>
     <script>
         require.config({ paths: { 'vs': 'https://mlibs.pages.dev/monaco-editor/dev/vs' } });
         require(['vs/editor/editor.main'], function () {
-            document.getElementById("editor").hidden = false;
             var editor = monaco.editor.create(document.getElementById("editor"), {
                 value: '// 在这里输入你的代码...\\nconsole.log("Hello, world!")',
                 language: 'javascript',
@@ -43,7 +42,6 @@
                 useShadows: true,
                 useSmoothScrolling: true,
             });
-            loading.style.display = 'none';
         });
     <\/script>
 </body>
