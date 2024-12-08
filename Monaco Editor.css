@@ -1,6 +1,15 @@
 #editor {
     margin: 0 auto;
 }
+
 #loading {
+    width: 90vw;
+    height: 75vh;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bolder;
+    border: 3px solid #333;
 }
