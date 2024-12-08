@@ -17,3 +17,11 @@
 #doc {
     margin: 15px;
 }
+
+#doc pre {
+    background-color: #333;
+}
+
+#doc pre code {
+    color: #eee;
+}
