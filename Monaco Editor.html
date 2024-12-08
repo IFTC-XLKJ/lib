@@ -14,7 +14,7 @@
         <h1>Monaco Editor</h1>
         <div id="test">
             <div id="loading">Monaco Editor加载中...</div>
-            <div id="editor" style="width: 90vw;height: 75vh;"></div>
+            <div id="editor" style="display: none;width: 90vw;height: 75vh;"></div>
         </div>
     </div>
     <script>
@@ -27,6 +27,7 @@
                 useShadows: true,
                 useSmoothScrolling: true,
             });
+            document.getElementById("editor").style.display = 'flex';
             loading.style.display = 'none';
         });
     </script>
