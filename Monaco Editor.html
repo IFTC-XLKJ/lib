@@ -14,12 +14,13 @@
         <h1>Monaco Editor</h1>
         <div id="test">
             <div id="loading">Monaco Editor加载中...</div>
-            <div id="editor" style="display: none;width: 90vw;height: 75vh;"></div>
+            <div id="editor" hidden style="width: 90vw;height: 75vh;"></div>
         </div>
     </div>
     <script>
         require.config({ paths: { 'vs': 'monaco-editor/dev/vs' } });
         require(['vs/editor/editor.main'], function () {
+            document.getElementById("editor").hidden = false;
             var editor = monaco.editor.create(document.getElementById("editor"), {
                 value: '// 在这里输入你的代码...\nconsole.log("Hello, world!")',
                 language: 'javascript',
@@ -27,7 +28,6 @@
                 useShadows: true,
                 useSmoothScrolling: true,
             });
-            document.getElementById("editor").style.display = 'flex';
             loading.style.display = 'none';
         });
     </script>
