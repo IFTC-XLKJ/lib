@@ -11,7 +11,7 @@ class Coder {
         for (let i = 0; i < nodes.length; i++) {
             const node = nodes[i]
             const tag = node.tagName
-            result = result.replace(node.outerHTML, `<span class="tag">${tag}</span>`)
+            result += `&lt;<span class="tag">${tag}</span>&gt;`
         }
         console.log(nodes)
         return result
