@@ -9,7 +9,9 @@ class Coder {
         const html = new DOMParser().parseFromString(result, 'text/html')
         const nodes = html.querySelectorAll("*")
         for (let i = 0; i < nodes.length; i++) {
-            console.log(nodes[i])
+            const node = nodes[i]
+            const tag = node.tagName
+            result = result.replace(node.outerHTML, `<span class="tag">${tag}</span>`)
         }
         console.log(nodes)
         return result
