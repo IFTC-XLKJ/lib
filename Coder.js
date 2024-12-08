@@ -7,6 +7,9 @@ class Coder {
         // HTML highlight
         const html = new DOMParser().parseFromString(result, 'text/html')
         const nodes = html.querySelectorAll("*")
+        for (let i = 0; i < nodes.length; i++) {
+            console.log(nodes[i])
+        }
         console.log(nodes)
         return result
     }
