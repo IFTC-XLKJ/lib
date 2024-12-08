@@ -21,9 +21,6 @@
 #doc pre {
     background-color: #333;
     border-radius: 5px;
-}
-
-#doc pre code {
     margin: 5px;
     color: #eee;
 }
