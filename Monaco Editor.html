@@ -7,7 +7,6 @@
     <title>Monaco Editor</title>
     <script src="/monaco-editor/dev/vs/loader.js"></script>
     <link rel="stylesheet" href="Monaco Editor.css">
-    <script src="highlight/lib/highlight.js"></script>
 </head>
 
 <body>
@@ -57,14 +56,13 @@
                     loading.style.display = 'none';
                 });
             </script>
-            <div id="doc">
-                <h1>Monaco Editor基础文档</h1>
-                <h2>注入编辑器</h2>
-                <pre>
-                    <code id="code1"></code>
-                </pre>
-                <script>
-                    code1.innerText = `
+        </div>
+        <div id="doc">
+            <h1>Monaco Editor基础文档</h1>
+            <h2>注入编辑器</h2>
+            <pre id="code1"></pre>
+            <script>
+                code1.innerText = `
 <!DOCTYPE html>
 <html>
 
@@ -92,9 +90,7 @@
 </body>
 
 </html>`
-                    const Highlight = require('highlight/lib/highlight.js');
-                </script>
-            </div>
+            </script>
         </div>
     </div>
 </body>
