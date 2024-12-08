@@ -24,5 +24,6 @@
 }
 
 #doc pre code {
+    margin: 5px;
     color: #eee;
 }
