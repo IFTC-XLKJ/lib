@@ -12,9 +12,10 @@ class Coder {
         for (let i = 0; i < nodes.length; i++) {
             const node = nodes[i]
             const tag = node.tagName.toLowerCase()
+            const attrs = node.attributes
+            console.log(attrs)
             result += `&lt;<span class="tag">${tag}</span>&gt;`
         }
-        console.log(nodes)
         return result
     }
 
