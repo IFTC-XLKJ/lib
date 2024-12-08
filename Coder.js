@@ -4,9 +4,10 @@ class Coder {
         this.#code = code
     }
     #init(code) {
-        let result = code
+        let result = ""
+        let CODE = code
         // HTML highlight
-        const html = new DOMParser().parseFromString(result, 'text/html')
+        const html = new DOMParser().parseFromString(CODE, 'text/html')
         const nodes = html.querySelectorAll("*")
         for (let i = 0; i < nodes.length; i++) {
             const node = nodes[i]
