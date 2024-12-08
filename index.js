@@ -8,7 +8,7 @@ onload = e => {
     }
     search.onkeydown = e => {
         if (e.key == 'Enter') {
-            const lib = libs.find(lib => lib.toLowerCase().includes(search.value.toLowerCase()))
+            const lib = libs.filter(lib => lib.toLowerCase().includes(search.value.toLowerCase()))
             if (lib) {
                 console.log(lib)
             }
