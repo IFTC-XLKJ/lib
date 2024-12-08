@@ -35,18 +35,18 @@
 <body>
     <div id="editor" hidden style="width: 90vw;height: 75vh;"></div>
     <script>
-    require.config({ paths: { 'vs': 'monaco-editor/dev/vs' } });
-    require(['vs/editor/editor.main'], function () {
-        document.getElementById("editor").hidden = false;
-        var editor = monaco.editor.create(document.getElementById("editor"), {
-            value: '// 在这里输入你的代码...\\nconsole.log("Hello, world!")',
-            language: 'javascript',
-            theme: 'vs-dark',
-            useShadows: true,
-            useSmoothScrolling: true,
+        require.config({ paths: { 'vs': 'monaco-editor/dev/vs' } });
+        require(['vs/editor/editor.main'], function () {
+            document.getElementById("editor").hidden = false;
+            var editor = monaco.editor.create(document.getElementById("editor"), {
+                value: '// 在这里输入你的代码...\\nconsole.log("Hello, world!")',
+                language: 'javascript',
+                theme: 'vs-dark',
+                useShadows: true,
+                useSmoothScrolling: true,
+            });
+            loading.style.display = 'none';
         });
-        loading.style.display = 'none';
-    });
     <\/script>
 </body>
 
